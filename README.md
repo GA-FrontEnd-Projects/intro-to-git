@@ -42,7 +42,9 @@ Let's get familiar with Git first.
 12) Looking at the Terminal output after the commit has been made, we should see a message that looks something like this:
 
 	`[master (root-commit) 908e8c0] Adding test.txt`
+
 	`1 file changed, 1 insertion(+)`
+	
 	`create mode 100644 test.txt`
 
 	"master" describes the branch we are currently on, "(root-commit)" lets us know that this was the first commit in the repository, and the alphanumeric string is called the "hash" for the commit, and serves, among other things, as a unique identifier for the commit. Then we see our commit message and a summary of our changes below.
