@@ -41,11 +41,11 @@ Let's get familiar with Git first.
 
 12) Looking at the Terminal output after the commit has been made, we should see a message that looks something like this:
 
-   `[master (root-commit) 908e8c0] Adding test.txt
-   1 file changed, 1 insertion(+)
-   create mode 100644 test.txt`
+	`[master (root-commit) 908e8c0] Adding test.txt`
+	`1 file changed, 1 insertion(+)`
+	`create mode 100644 test.txt`
 
-   "master" describes the branch we are currently on, "(root-commit)" lets us know that this was the first commit in the repository, and the alphanumeric string is called the "hash" for the commit, and serves, among other things, as a unique identifier for the commit. Then we see our commit message and a summary of our changes below.
+	"master" describes the branch we are currently on, "(root-commit)" lets us know that this was the first commit in the repository, and the alphanumeric string is called the "hash" for the commit, and serves, among other things, as a unique identifier for the commit. Then we see our commit message and a summary of our changes below.
 
 Git now has a baseline state for our test.txt file. Subsequent changes to this file will be kept on record.
 
@@ -53,7 +53,7 @@ Git now has a baseline state for our test.txt file. Subsequent changes to this f
 
 14) In this case, let's add the change manually (`git add test.txt`) and then commit that change, this time using the `-m` flag ("m" for "message") `git commit -m [your message in quotes]`. You should see similar output on the command line to what we saw after our last commit.
 
-15) Now that we have more than one commit, we can begin to use Git to compare different snapshots of our code. The most recent commit is called HEAD, and one way we can traverse through commits is with the "~" operator, which, in our case, acts like a "number of commits ago" operator. Type "git diff HEAD~1" to see the difference between the current snapshot of the code and the last one. The old code is shown in red and the new code is shown in green.
+15) Now that we have more than one commit, we can begin to use Git to compare different snapshots of our code. The most recent commit is called HEAD, and one way we can traverse through commits is with the `~` operator, which, in our case, acts like a "number of commits ago" operator. Type "git diff HEAD~1" to see the difference between the current snapshot of the code and the last one. The old code is shown in red and the new code is shown in green.
 
 
 Now that you have some basic familiarity with Git, let's explore GitHub a bit.
