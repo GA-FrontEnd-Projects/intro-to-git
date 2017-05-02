@@ -35,25 +35,25 @@ Let's get familiar with Git first.
 
 9) Let's initialize the Git repository in this directory. Type `pwd` to make sure you are in the correct folder, and then type `git init` to create a git repository. Type `ls` in the terminal to see whether git created any files. You should only see test.txt, at the moment. Type `ls -a` to see a list of all the files in this folder, including "hidden" files, which are files starting with ".". You should see a ".git" folder now. Feel free to look around in there, but don't change anything.
 
-9) If you changed directories, go back to the folder where you created test.txt. Type `git status`, which will display "test.txt" as an untracked file. Git is aware of changes to files in and below the root folder of the project by default, but before it can keep a record of changes, files need to be added to the index, which is the list of files it knows to track. Type `git add test.txt` to add that file to the index.
+10) If you changed directories, go back to the folder where you created test.txt. Type `git status`, which will display "test.txt" as an untracked file. Git is aware of changes to files in and below the root folder of the project by default, but before it can keep a record of changes, files need to be added to the index, which is the list of files it knows to track. Type `git add test.txt` to add that file to the index.
 
-10) Git now knows that it needs to track changes to this file, but it won't actually start tracking changes until it has a baseline state for the file. Git's list of changes are called "commits", and each commit can be a single change to a single file, or multiple changes to multiple files. Adding files to the index, removing them from the index, and deleting them completely are also considered parts of a commit. Type `git commit`, which begins the commit process, and using the same process as we did in `vi` before (type `i` to begin editing), enter a message that describes what changed in this commit. In this case, writing something like "Adding test.txt" will work just fine. Type `:wq` and hit enter to save your commit.
+11) Git now knows that it needs to track changes to this file, but it won't actually start tracking changes until it has a baseline state for the file. Git's list of changes are called "commits", and each commit can be a single change to a single file, or multiple changes to multiple files. Adding files to the index, removing them from the index, and deleting them completely are also considered parts of a commit. Type `git commit`, which begins the commit process, and using the same process as we did in `vi` before (type `i` to begin editing), enter a message that describes what changed in this commit. In this case, writing something like "Adding test.txt" will work just fine. Type `:wq` and hit enter to save your commit.
 
-11) Looking at the Terminal output after the commit has been made, we should see a message that looks something like this:
+12) Looking at the Terminal output after the commit has been made, we should see a message that looks something like this:
 
-`[master (root-commit) 908e8c0] Adding test.txt
- 1 file changed, 1 insertion(+)
- create mode 100644 test.txt`
+[master (root-commit) 908e8c0] Adding test.txt
+1 file changed, 1 insertion(+)
+create mode 100644 test.txt
 
 "master" describes the branch we are currently on, "(root-commit)" lets us know that this was the first commit in the repository, and the alphanumeric string is called the "hash" for the commit, and serves, among other things, as a unique identifier for the commit. Then we see our commit message and a summary of our changes below.
 
 Git now has a baseline state for our test.txt file. Subsequent changes to this file will be kept on record.
 
-12) Let's open test.txt and make a change to it. Change "world!!" to "New York!", and save the file. After you have saved your changes and exited `vi`, type `git status` to see the state of your repository. You'll see that test.txt is listed under "Changes not staged for commit". Changing a file does not necessarily mean that it will be automatically added to the next commit -- we have to tell git that we want a change to be included in a particular commit. We can do this by typing `git add [file path(s)]`, or we can include all changes to files in the index at the time of commit by adding the "a" flag (`git commit -am [commit message]`).
+13) Let's open test.txt and make a change to it. Change "world!!" to "New York!", and save the file. After you have saved your changes and exited `vi`, type `git status` to see the state of your repository. You'll see that test.txt is listed under "Changes not staged for commit". Changing a file does not necessarily mean that it will be automatically added to the next commit -- we have to tell git that we want a change to be included in a particular commit. We can do this by typing `git add [file path(s)]`, or we can include all changes to files in the index at the time of commit by adding the "a" flag (`git commit -am [commit message]`).
 
-13) In this case, let's add the change manually (`git add test.txt`) and then commit that change, this time using the `-m` flag ("m" for "message") `git commit -m [your message in quotes]`. You should see similar output on the command line to what we saw after our last commit.
+14) In this case, let's add the change manually (`git add test.txt`) and then commit that change, this time using the `-m` flag ("m" for "message") `git commit -m [your message in quotes]`. You should see similar output on the command line to what we saw after our last commit.
 
-14) Now that we have more than one commit, we can begin to use Git to compare different snapshots of our code. The most recent commit is called HEAD, and one way we can traverse through commits is with the "~" operator, which, in our case, acts like a "number of commits ago" operator. Type "git diff HEAD~1" to see the difference between the current snapshot of the code and the last one. The old code is shown in red and the new code is shown in green.
+15) Now that we have more than one commit, we can begin to use Git to compare different snapshots of our code. The most recent commit is called HEAD, and one way we can traverse through commits is with the "~" operator, which, in our case, acts like a "number of commits ago" operator. Type "git diff HEAD~1" to see the difference between the current snapshot of the code and the last one. The old code is shown in red and the new code is shown in green.
 
 
 Now that you have some basic familiarity with Git, let's explore GitHub a bit.
