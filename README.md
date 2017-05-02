@@ -44,12 +44,14 @@ Let's get familiar with Git first.
 	`[master (root-commit) 908e8c0] Adding test.txt`
 
 	`1 file changed, 1 insertion(+)`
-	
+
 	`create mode 100644 test.txt`
 
 	"master" describes the branch we are currently on, "(root-commit)" lets us know that this was the first commit in the repository, and the alphanumeric string is called the "hash" for the commit, and serves, among other things, as a unique identifier for the commit. Then we see our commit message and a summary of our changes below.
 
+
 Git now has a baseline state for our test.txt file. Subsequent changes to this file will be kept on record.
+
 
 13) Let's open test.txt and make a change to it. Change "world!!" to "New York!", and save the file. After you have saved your changes and exited `vi`, type `git status` to see the state of your repository. You'll see that test.txt is listed under "Changes not staged for commit". Changing a file does not necessarily mean that it will be automatically added to the next commit -- we have to tell git that we want a change to be included in a particular commit. We can do this by typing `git add [file path(s)]`, or we can include all changes to files in the index at the time of commit by adding the "a" flag (`git commit -am [commit message]`).
 
